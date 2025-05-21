@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Showroom | BA12 Automotive</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+    </script>
+    <header>
+      <div class="navbar">
+        <div class="logo-title">
+          <a href="index.html">
+            <img src="images/LogoPNG.png" alt="BA12 Automotive Logo" class="nav-logo">
+          </a>
+        </div>
+        <button class="burger" onclick="toggleMenu()">☰</button>
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="showroom.html">Showroom</a>
+        </nav>
+      </div>
+    </header>
+
+
+  <main>
+    <h2>Showroom</h2>
+    <section class="car-grid">
+      <div class="car-card">
+        <img src="images/golf.jpg" alt="Audi A3" />
+        <div class="car-info">
+          <h3>Volkswagen Golf GTi</h3>
+          <p class="price">£1,995</p>
+          <a href="car-audi-a3.html" class="view-button">View Listing</a>
+        </div>
+      </div>
+      <div class="car-card">
+        <img src="images/e61.jpg" alt="BMW 1 Series" />
+        <div class="car-info">
+          <h3>BMW take my money</h3>
+          <p class="price">£9,450</p>
+          <a href="car-bmw-1series.html" class="view-button">View Listing</a>
+        </div>
+      </div>
+      <!-- Repeat for more cars -->
+    </section>
+  </main>
+
+  <footer>
+    <p>BA12 Automotive 2025</p>
+    <p><a href="mailto:sales@ba12automotive.co.uk">sales@ba12automotive.co.uk</a></p>
+  </footer>
+<script>
+fetch('/cars/index.json')
+  .then(res => res.json())
+  .then(cars => {
+    const grid = document.querySelector('.car-grid');
+    cars.forEach(car => {
+      const card = document.createElement('div');
+      card.className = 'car-card';
+      card.innerHTML = `
+        <img src="${car.image}" alt="${car.title}" />
+        <div class="car-info">
+          <h3>${car.title}</h3>
+          <p class="price">${car.price}</p>
+          <a href="cars/${car.slug}.html" class="view-button">View Listing</a>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Showroom - BA12 Automotive</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h2>Showroom</h2>
+    <section class="car-grid">
+      <!-- Static cars can go here -->
+    </section>
+  </main>
+  <script>
+    fetch('/cars/index.json')
+      .then(res => res.json())
+      .then(cars => {
+        const grid = document.querySelector('.car-grid');
+        cars.forEach(car => {
+          const card = document.createElement('div');
+          card.className = 'car-card';
+          card.innerHTML = `
+            <img src="\${car.image}" alt="\${car.title}" />
+            <div class="car-info">
+              <h3>\${car.title}</h3>
+              <p class="price">\${car.price}</p>
+              <a href="cars/\${car.slug}.html" class="view-button">View Listing</a>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>

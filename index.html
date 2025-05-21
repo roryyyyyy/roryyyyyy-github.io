@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BA12 Automotive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+  </script>
+  <header>
+  <div class="navbar">
+    <div class="logo-title">
+      <a href="index.html">
+        <img src="images/LogoPNG.png" alt="BA12 Automotive Logo" class="nav-logo">
+      </a>
+    </div>
+    <button class="burger" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="showroom.html">Showroom</a>
+    </nav>
+  </div>
+</header>
+
+
+  <div class="intro-container">
+    <div class="logo">
+      <img src="images/LogoPNG.png" alt="BA12 Automotive Logo" />
+    </div>
+
+    <div class="intro">
+      <p>SPECIALISTS IN USED VEHICLE SALES, OFFERING AFFORDABLE PRICES AND A RELIABLE, RELAXED APPROACH TO BUYING YOUR NEXT CAR</p>
+    </div>
+  </div>
+
+  <h2>Featured Products</h2>
+  <div class="products">
+    <div class="product">
+      <img src="vespa.jpg" alt="Vespa" />
+      <p>Vespa Primavera 150<br>$25</p>
+    </div>
+    <div class="product">
+      <img src="sedan.jpg" alt="Sedan" />
+      <p>SleekRide Sedan<br>$25</p>
+    </div>
+    <div class="product">
+      <img src="freightliner.jpg" alt="Freightliner" />
+      <p>Heavy-Duty Freightliner<br>$25</p>
+    </div>
+  </div>
+
+  <button class="shop-button">BROWSE ALL</button>
+
+  <div class="social">
+    <h2>Follow us on social</h2>
+    <iframe src="https://www.instagram.com/ba12_automotive/embed" allowtransparency="true"></iframe>
+  </div>
+
+  <footer>
+    <p>BA12 Automotive 2025</p>
+    <p><a href="mailto:sales@ba12automotive.co.uk" style="color:#caa25f;">sales@ba12automotive.co.uk</a></p>
+  </footer>
+</body>
+</html>
