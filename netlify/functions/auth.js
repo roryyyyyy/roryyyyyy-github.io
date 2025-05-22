@@ -1,7 +1,6 @@
-
 exports.handler = async function(event, context) {
   const code = event.queryStringParameters.code;
-  const redirect_uri = "https://lively-treacle-a6b5ff.netlify.app/admin/";
+  const redirect_uri = "https://ba12admin.uk.auth0.com/login/callback";
 
   const response = await fetch("https://ba12admin.uk.auth0.com/oauth/token", {
     method: "POST",
