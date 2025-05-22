@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: ba12automotive/ba12-site
+  repo: roryyyyyy/roryyyyyy-github.io
   base_url: /.netlify/functions
   auth_endpoint: auth
 
