@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="car-details">
+    <img src="{{ thumbnail }}" alt="{{ title }}">
+    <h1>{{ title }}</h1>
+    <p class="price">{{ price }}</p>
+    <div class="description">
+      {{ body }}
+    </div>
+    <a href="form.html?car={{ title | urlencode }}" class="enquire-button">Enquire Now</a>
+    <a href="tel:+447XXXXXXXXX" class="call-button">Call Now</a>
+  </main>
+</body>
+</html>

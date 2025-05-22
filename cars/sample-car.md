@@ -1,7 +1,7 @@
 ---
-title: "Volkswagen Golf GTi"
-price: "£1,995"
-description: "A sporty hatchback with excellent performance and handling."
-image: "/images/golf.jpg"
-slug: "golf-gti"
+title: "BMW M3"
+price: "£19,995"
+thumbnail: "images/uploads/bmw-m3.jpg"
 ---
+
+A powerful and stylish sports saloon with leather interior, M Performance kit, and full service history.
